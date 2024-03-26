@@ -12,10 +12,11 @@ import javax.servlet.http.HttpServletRequest;
  * @author rr
  */
 @RestController
-@RequestMapping("name")
+@RequestMapping("/")
 public class NameController {
-    @GetMapping("/")
-    public String getNameByGet(String name) {
+    @GetMapping("/name")
+    public String getNameByGet(String name, HttpServletRequest request) {
+        System.out.println(request.getHeader("yupi"));
         return "GET 你的名字是" + name;
     }
 
@@ -49,6 +50,7 @@ public class NameController {
             throw new RuntimeException("无权限");
         }
 
-        return "POST 用户名字是" + user.getUsername();
+        String result = "POST 用户名字是" + user.getUsername();
+        return result;
     }
 }

@@ -41,21 +41,6 @@ public class InterfaceInfoServiceImpl extends ServiceImpl<InterfaceInfoMapper, I
         if (StringUtils.isNotBlank(name) && name.length() > 50) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "内容过长");
         }
-        /**if (StringUtils.isNotBlank(description)) {
-            throw new BusinessException(ErrorCode.PARAMS_ERROR, "请填写描述信息");
-        }
-        if (StringUtils.isNotBlank(url)) {
-            throw new BusinessException(ErrorCode.PARAMS_ERROR, "请填写接口地址");
-        }
-        if (StringUtils.isNotBlank(responseHeader)) {
-            throw new BusinessException(ErrorCode.PARAMS_ERROR, "请填写请求头");
-        }
-        if (StringUtils.isNotBlank(requestHeader)) {
-            throw new BusinessException(ErrorCode.PARAMS_ERROR, "请填写响应头");
-        }
-        if (StringUtils.isNotBlank(method)) {
-            throw new BusinessException(ErrorCode.PARAMS_ERROR, "请填写请求类型");
-        }*/
     }
 
 }
