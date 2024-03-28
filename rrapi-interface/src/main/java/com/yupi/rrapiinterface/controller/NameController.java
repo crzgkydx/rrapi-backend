@@ -12,15 +12,15 @@ import javax.servlet.http.HttpServletRequest;
  * @author rr
  */
 @RestController
-@RequestMapping("/name")
+@RequestMapping("/")
 public class NameController {
-    @GetMapping("/get")
+    @GetMapping("/name")
     public String getNameByGet(String name, HttpServletRequest request) {
         System.out.println(request.getHeader("yupi"));
         return "GET 你的名字是" + name;
     }
 
-    @PostMapping("/post")
+    @PostMapping("/")
     public String getNameByPost(@RequestParam String name) {
         return "POST 你的名字是" + name;
     }

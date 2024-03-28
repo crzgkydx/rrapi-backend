@@ -27,11 +27,6 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.yupi</groupId>
-            <artifactId>rrapi-client-sdk</artifactId>
-            <version>0.0.1</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
         </dependency>
